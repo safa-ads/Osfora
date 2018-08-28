@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/photo_cover"
+        android:layout_width="match_parent"
+        android:layout_height="266.5dp">
+
+        <ImageView
+            android:id="@+id/cover_photo"
+            android:layout_width="match_parent"
+            android:layout_height="202.5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_apple" />
+
+        <RelativeLayout
+            android:id="@+id/photo_verified"
+            android:layout_width="134dp"
+            android:layout_height="128dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:src="@drawable/rick"
+                app:civ_border_color="#FFFFFFFF"
+                app:civ_border_width="5dp"
+                tools:ignore="NotSibling" />
+
+            <ImageView
+                android:layout_width="44.19dp"
+                android:layout_height="42.16dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_verified_medium"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/photo_cover"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/roboto_bold"
+            android:lineSpacingExtra="24sp"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            tools:text="Tom Hanks" />
+
+        <TextView
+            android:id="@+id/profile_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/roboto"
+            android:lineSpacingExtra="24sp"
+            android:textAlignment="center"
+            android:textColor="@color/colorGrey"
+            android:textSize="20sp"
+            android:layout_marginTop="2dp"
+            tools:text="tom_hanks" />
+
+        <TextView
+            android:id="@+id/profile_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/roboto"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:layout_marginStart="58dp"
+            android:layout_marginEnd="58dp"
+            tools:text="CEO Apple, Fan of Auburn football and Duke basketball " />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:id="@+id/image_location"
+                android:layout_width="14dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:scaleX="16dp"
+                android:scaleY="404dp"
+                android:src="@drawable/ic_location_on_black_24dp" />
+
+            <TextView
+                android:id="@+id/text_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/image_location"
+                android:fontFamily="@font/roboto"
+                android:textAlignment="textStart"
+                android:textColor="#000"
+                android:textSize="14sp"
+                tools:text="Spain" />
+
+            <ImageView
+                android:id="@+id/image_date"
+                android:layout_width="18dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/image_location"
+                android:scaleType="fitXY"
+                android:layout_marginTop="18dp"
+                android:scaleX="16dp"
+                android:scaleY="404dp"
+                android:src="@drawable/ic_date_range_black_24dp" />
+
+            <TextView
+                android:id="@+id/text_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_location"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_toEndOf="@+id/image_date"
+                android:fontFamily="@font/roboto"
+                android:textColor="#000"
+                android:textSize="14sp"
+                tools:text="Joined on July 2013" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
