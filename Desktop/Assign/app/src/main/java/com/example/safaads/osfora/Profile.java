@@ -5,7 +5,7 @@ public class Profile {
     String coverPhoto="";
     Boolean isPhoto=false;
     String profilePhoto="";
-    Boolean isVerifited=false;
+    Boolean isVerified=false;
     String profilename="";
     String profileID="";
     String profileDesc="";
@@ -44,12 +44,12 @@ public class Profile {
         this.profilePhoto = profilePhoto;
     }
 
-    public Boolean getVerifited() {
-        return isVerifited;
+    public Boolean getVerified() {
+        return isVerified;
     }
 
-    public void setVerifited(Boolean verifited) {
-        isVerifited = verifited;
+    public void setVerified(Boolean verifited) {
+        isVerified = verifited;
     }
 
     public String getProfilename() {

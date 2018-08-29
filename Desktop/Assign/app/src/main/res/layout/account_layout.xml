@@ -35,6 +35,7 @@
                 tools:ignore="NotSibling" />
 
             <ImageView
+                android:id="@+id/verify_image"
                 android:layout_width="44.19dp"
                 android:layout_height="42.16dp"
                 android:layout_alignParentTop="true"

@@ -7,11 +7,10 @@ import android.util.Log;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
+
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
-
-import static com.example.safaads.osfora.R.style.MyActionBar;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProfileActivity  extends AppCompatActivity implements IProfileManagerListener  {
 
@@ -34,13 +33,29 @@ public class ProfileActivity  extends AppCompatActivity implements IProfileManag
 
     @Override
     public void onSuccess(Profile results) {
-        ImageView coverPhoto = findViewById(R.id.cover_photo);
+
+        //Set cover photo and placeholder if no cover photo
+        ImageView coverPhoto =  findViewById(R.id.cover_photo);
         Picasso.get()
-                .load("http://i.imgur.com/DvpvklR.png")
+                .load(results.getCoverPhoto())
                 .placeholder(R.drawable.ic_apple)
                 .error(R.drawable.ic_error)
                 .into(coverPhoto);
-//        Picasso.get().load("http://i.imgur.com/DvpvklR.png").into(coverPhoto);
+
+        //Set profile photo and placeholder if no profile photo
+        CircleImageView profilePhoto =  findViewById(R.id.profile_image);
+        Picasso.get()
+                .load(results.getProfilePhoto())
+                .placeholder(R.drawable.ic_apple)
+                .error(R.drawable.ic_error)
+                .into(profilePhoto);
+
+        //Set verification and none if not verified
+        ImageView verify = findViewById(R.id.verify_image);
+        if(results.getVerified()){
+            
+        }
+
         Log.i("hello", "onSuccess: " + results);
     }
 
