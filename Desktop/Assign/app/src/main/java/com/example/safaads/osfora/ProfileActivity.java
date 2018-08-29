@@ -4,8 +4,10 @@ import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 
 import com.squareup.picasso.Picasso;
@@ -53,7 +55,29 @@ public class ProfileActivity  extends AppCompatActivity implements IProfileManag
         //Set verification and none if not verified
         ImageView verify = findViewById(R.id.verify_image);
         if(results.getVerified()){
-            
+            verify.setVisibility(View.VISIBLE);
+        }else{
+            verify.setVisibility(View.GONE);
+        }
+
+        //Set Name of account, id and description
+        TextView profileName = findViewById(R.id.profile_name);
+        profileName.setText(results.getProfilename());
+        TextView profileID = findViewById(R.id.profile_id);
+        profileID.setText(results.getProfileID());
+        TextView profileDesc = findViewById(R.id.profile_desc);
+        profileDesc.setText(results.getProfileDesc());
+
+        //Set Location and none if no location
+        ImageView location = findViewById(R.id.image_location);
+        TextView locationName = findViewById(R.id.text_location);
+        if(results.getLocation()){
+            location.setVisibility(View.VISIBLE);
+            locationName.setVisibility(View.VISIBLE);
+            locationName.setText(results.getLocationName());
+        }else{
+            location.setVisibility(View.GONE);
+            locationName.setVisibility(View.GONE);
         }
 
         Log.i("hello", "onSuccess: " + results);

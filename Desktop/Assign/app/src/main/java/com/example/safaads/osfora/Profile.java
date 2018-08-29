@@ -11,6 +11,34 @@ public class Profile {
     String profileDesc="";
     Boolean isLocation=false;
     String locationName="";
+    String joinDate="";
+    String following="";
+
+    public String getJoinDate() {
+        return joinDate;
+    }
+
+    public void setJoinDate(String joinDate) {
+        this.joinDate = joinDate;
+    }
+
+    public String getFollowing() {
+        return following;
+    }
+
+    public void setFollowing(String following) {
+        this.following = following;
+    }
+
+    public String getFollowed() {
+        return followed;
+    }
+
+    public void setFollowed(String followed) {
+        this.followed = followed;
+    }
+
+    String followed="";
 
     public Boolean getCover() {
         return isCover;
