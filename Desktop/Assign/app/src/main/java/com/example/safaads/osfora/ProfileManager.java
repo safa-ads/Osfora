@@ -22,8 +22,8 @@ public class ProfileManager {
         profileAttr.setProfileID("@nina_ellaithy");
         profileAttr.setProfileDesc("Machine learning!!");
         profileAttr.setJoinDate("Joined on July 2013");
-        profileAttr.setFollowing("Following 59");
-        profileAttr.setFollowed("Followed by 10M");
+        profileAttr.setFollowing(59);
+        profileAttr.setFollowed(10000000);
 
 
         if(profileL != null){

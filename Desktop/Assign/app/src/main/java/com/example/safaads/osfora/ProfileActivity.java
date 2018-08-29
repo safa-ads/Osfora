@@ -80,11 +80,30 @@ public class ProfileActivity  extends AppCompatActivity implements IProfileManag
             locationName.setVisibility(View.GONE);
         }
 
+        //Set following and followed by
+        TextView followingNum = findViewById(R.id.text_follow);
+        long count = results.getFollowing();
+        String text =numberFormat(count);
+        followingNum.setText("Following "+ text);
+
+        TextView followedNum = findViewById(R.id.text_followed);
+        count = results.getFollowed();
+        text =numberFormat(count);
+        followedNum.setText("Followed by "+text);
+
         Log.i("hello", "onSuccess: " + results);
     }
 
     @Override
     public void onError() {
 
+    }
+
+    public static String numberFormat(long count) {
+        if (count < 1000) return "" + count;
+        int exp = (int) (Math.log(count) / Math.log(1000));
+        return String.format("%.1f %c",
+                count / Math.pow(1000, exp),
+                "kMGTPE".charAt(exp-1));
     }
 }
