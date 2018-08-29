@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
     <RelativeLayout
         android:id="@+id/photo_cover"
@@ -60,8 +61,8 @@
             android:fontFamily="@font/roboto_bold"
             android:lineSpacingExtra="24sp"
             android:textAlignment="center"
-            android:textSize="24sp"
-            tools:text="Tom Hanks" />
+            android:textSize="24dp"
+            android:text="Tom Hanks" />
 
         <TextView
             android:id="@+id/profile_id"
@@ -72,9 +73,9 @@
             android:lineSpacingExtra="24sp"
             android:textAlignment="center"
             android:textColor="@color/colorGrey"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:layout_marginTop="2dp"
-            tools:text="tom_hanks" />
+            android:text="tom_hanks" />
 
         <TextView
             android:id="@+id/profile_desc"
@@ -84,10 +85,10 @@
             android:fontFamily="@font/roboto"
             android:textAlignment="center"
             android:textColor="#000"
-            android:textSize="16sp"
+            android:textSize="16dp"
             android:layout_marginStart="58dp"
             android:layout_marginEnd="58dp"
-            tools:text="CEO Apple, Fan of Auburn football and Duke basketball " />
+            android:text="CEO Apple, Fan of Auburn football and Duke basketball " />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -101,8 +102,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleType="fitXY"
-                android:scaleX="16dp"
-                android:scaleY="404dp"
                 android:src="@drawable/ic_location_on_black_24dp" />
 
             <TextView
@@ -114,8 +113,8 @@
                 android:fontFamily="@font/roboto"
                 android:textAlignment="textStart"
                 android:textColor="#000"
-                android:textSize="14sp"
-                tools:text="Spain" />
+                android:textSize="14dp"
+                android:text="Spain" />
 
             <ImageView
                 android:id="@+id/image_date"
@@ -124,8 +123,6 @@
                 android:layout_below="@+id/image_location"
                 android:scaleType="fitXY"
                 android:layout_marginTop="18dp"
-                android:scaleX="16dp"
-                android:scaleY="404dp"
                 android:src="@drawable/ic_date_range_black_24dp" />
 
             <TextView
@@ -138,8 +135,8 @@
                 android:layout_toEndOf="@+id/image_date"
                 android:fontFamily="@font/roboto"
                 android:textColor="#000"
-                android:textSize="14sp"
-                tools:text="Joined on July 2013" />
+                android:textSize="14dp"
+                android:text="Joined on July 2013" />
 
             <ImageView
                 android:id="@+id/image_follow"
@@ -148,8 +145,6 @@
                 android:layout_below="@+id/image_date"
                 android:scaleType="fitXY"
                 android:layout_marginTop="18dp"
-                android:scaleX="16dp"
-                android:scaleY="404dp"
                 android:src="@drawable/ic_follow" />
 
             <TextView
@@ -162,8 +157,8 @@
                 android:layout_toEndOf="@+id/image_follow"
                 android:fontFamily="@font/roboto"
                 android:textColor="#000"
-                android:textSize="14sp"
-                tools:text="Following 59" />
+                android:textSize="14dp"
+                android:text="Following 59" />
             <TextView
                 android:id="@+id/text_followed"
                 android:layout_width="wrap_content"
@@ -174,8 +169,8 @@
                 android:layout_toEndOf="@+id/image_follow"
                 android:fontFamily="@font/roboto"
                 android:textColor="#000"
-                android:textSize="14sp"
-                tools:text="Followed by 10M" />
+                android:textSize="14dp"
+                android:text="Followed by 10M" />
 
         </RelativeLayout>
     </LinearLayout>
