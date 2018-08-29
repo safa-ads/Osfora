@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Osfora</string>
+    <string name="app_name">Search Tweeters</string>
+    <string name="search">Search</string>
 </resources>

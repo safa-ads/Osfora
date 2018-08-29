@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tweeter_image"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="15.5dp"
+        android:layout_marginBottom="12.5dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/nature2"
+        app:civ_border_color="#FFFFFFFF"
+        tools:ignore="NotSibling" />
+    <ImageView
+        android:id="@+id/verified_image"
+        android:layout_width="24dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="51.83dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_verified_small"/>
+    <TextView
+        android:id="@+id/tweeter_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/tweeter_image"
+        android:layout_marginStart="16dp"
+        android:text="Safa Ads"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:textColor="#BF000000"
+        android:textSize="16dp"
+        />
+
+    <TextView
+        android:id="@+id/tweeter_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tweeter_name"
+        android:layout_below="@+id/tweeter_name"
+        android:fontFamily="sans-serif"
+        android:text="safa_ads"
+        android:textColor="#BF606060"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/tweeter_follower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9.5dp"
+        android:layout_alignStart="@+id/tweeter_username"
+        android:layout_below="@+id/tweeter_username"
+        android:fontFamily="sans-serif"
+        android:text="1000 followers"
+        android:textColor="#BF000000"
+        android:textSize="14dp" />
+
+
+
+
+</RelativeLayout>

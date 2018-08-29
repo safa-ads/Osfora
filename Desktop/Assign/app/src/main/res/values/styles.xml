@@ -8,4 +8,23 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+        <style name="ActivityCustomTheme" parent="@android:style/Theme.Holo.Light">
+            <item name="android:actionBarStyle">@style/ActivityCustomTheme.ActionBarTheme</item>
+        </style>
+
+    <style name="ActivityCustomTheme.ActionBarTheme" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#00ACED</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:paddingRight">32dp</item>
+        <item name="android:titleTextStyle">@style/ActivityCustomTheme.ActionBar.Text</item>
+    </style>
+
+
+    <style name="ActivityCustomTheme.ActionBar.Text" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@string/font_fontFamily_medium</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
 </resources>

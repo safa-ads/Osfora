@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ActivityCustomTheme.ActionBarTheme" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#00ACED</item>
+        <item name="android:titleMarginStart">16dp</item>
+        <item name="android:paddingRight">32dp</item>
+        <item name="android:titleTextStyle">@style/ActivityCustomTheme.ActionBar.Text</item>
+    </style>
+</resources>
