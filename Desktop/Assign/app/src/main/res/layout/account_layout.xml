@@ -98,8 +98,8 @@
 
             <ImageView
                 android:id="@+id/image_location"
-                android:layout_width="14dp"
-                android:layout_height="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:scaleType="fitXY"
                 android:scaleX="16dp"
                 android:scaleY="404dp"
@@ -119,8 +119,8 @@
 
             <ImageView
                 android:id="@+id/image_date"
-                android:layout_width="18dp"
-                android:layout_height="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/image_location"
                 android:scaleType="fitXY"
                 android:layout_marginTop="18dp"
@@ -140,6 +140,42 @@
                 android:textColor="#000"
                 android:textSize="14sp"
                 tools:text="Joined on July 2013" />
+
+            <ImageView
+                android:id="@+id/image_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_date"
+                android:scaleType="fitXY"
+                android:layout_marginTop="18dp"
+                android:scaleX="16dp"
+                android:scaleY="404dp"
+                android:src="@drawable/ic_follow" />
+
+            <TextView
+                android:id="@+id/text_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_date"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_toEndOf="@+id/image_follow"
+                android:fontFamily="@font/roboto"
+                android:textColor="#000"
+                android:textSize="14sp"
+                tools:text="Following 59" />
+            <TextView
+                android:id="@+id/text_followed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_follow"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_toEndOf="@+id/image_follow"
+                android:fontFamily="@font/roboto"
+                android:textColor="#000"
+                android:textSize="14sp"
+                tools:text="Followed by 10M" />
 
         </RelativeLayout>
     </LinearLayout>
