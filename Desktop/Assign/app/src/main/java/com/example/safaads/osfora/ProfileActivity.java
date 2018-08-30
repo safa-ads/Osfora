@@ -1,5 +1,7 @@
 package com.example.safaads.osfora;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +10,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.squareup.picasso.Picasso;
@@ -17,6 +20,10 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class ProfileActivity  extends AppCompatActivity implements IProfileManagerListener  {
 
     private ProfileManager profileM;
+    private boolean networkOk;
+    private static final String JSON_URL = "https://api.nasa.gov/planetary/apod?api_key=NNKOjkoul8n1CH18TWA9gwngW1s1SmjESPjNoUFo";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +34,17 @@ public class ProfileActivity  extends AppCompatActivity implements IProfileManag
         }
         setContentView(R.layout.account_layout);
 
+        networkOk = NetworkHelper.hasNetworkAccess(this);
+
+        if (networkOk) {
+            Intent intent = new Intent(this, ProfileManager.class);
+            intent.setData(Uri.parse(JSON_URL));
+            startService(intent);
+        } else {
+            Toast.makeText(this, "Network not available!", Toast.LENGTH_SHORT).show();
+        }
+
+
         profileM = new ProfileManager();
         profileM.profileL = this;
         profileM.profileDetails();
@@ -35,7 +53,6 @@ public class ProfileActivity  extends AppCompatActivity implements IProfileManag
 
     @Override
     public void onSuccess(Profile results) {
-
         //Set cover photo and placeholder if no cover photo
         ImageView coverPhoto =  findViewById(R.id.cover_photo);
         Picasso.get()

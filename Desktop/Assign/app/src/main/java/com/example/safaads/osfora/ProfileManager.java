@@ -1,10 +1,10 @@
 package com.example.safaads.osfora;
 
-
-public class ProfileManager {
+public class ProfileManager{
 
     public IProfileManagerListener profileL;
     public Profile profileAttr;
+
 
     public void profileDetails(){
         profileAttr = new Profile();
@@ -24,6 +24,7 @@ public class ProfileManager {
         profileAttr.setJoinDate("Joined on July 2013");
         profileAttr.setFollowing(59);
         profileAttr.setFollowed(10000000);
+        profileAttr.setVerified(true);
 
 
         if(profileL != null){
@@ -32,3 +33,4 @@ public class ProfileManager {
 
     }
 }
+
