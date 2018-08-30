@@ -22,7 +22,7 @@ public class ProfileActivity  extends AppCompatActivity implements IProfileManag
     private ProfileManager profileM;
     private boolean networkOk;
     private static final String JSON_URL = "https://api.nasa.gov/planetary/apod?api_key=NNKOjkoul8n1CH18TWA9gwngW1s1SmjESPjNoUFo";
-
+    private String profileID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,10 +44,11 @@ public class ProfileActivity  extends AppCompatActivity implements IProfileManag
             Toast.makeText(this, "Network not available!", Toast.LENGTH_SHORT).show();
         }
 
+        profileID = getIntent().getStringExtra(SearchActivity.EXTRA_NAME); //ID of user that I will search with
 
         profileM = new ProfileManager();
         profileM.profileL = this;
-        profileM.profileDetails();
+        profileM.profileDetails(profileID);
     }
 
 

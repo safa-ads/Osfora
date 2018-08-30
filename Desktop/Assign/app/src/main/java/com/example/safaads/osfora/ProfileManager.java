@@ -6,7 +6,7 @@ public class ProfileManager{
     public Profile profileAttr;
 
 
-    public void profileDetails(){
+    public void profileDetails(String profileID){ // search with profileID in API
         profileAttr = new Profile();
         //cover photo settings
         profileAttr.setCover(true);
@@ -19,7 +19,7 @@ public class ProfileManager{
         profileAttr.setProfilePhoto("http://i.imgur.com/DvpvklR.png");
         //profile info
         profileAttr.setProfilename("Narihan Ellaithy");
-        profileAttr.setProfileID("@nina_ellaithy");
+        profileAttr.setProfileID(profileID);
         profileAttr.setProfileDesc("Machine learning!!");
         profileAttr.setJoinDate("Joined on July 2013");
         profileAttr.setFollowing(59);
